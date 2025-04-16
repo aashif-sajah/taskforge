@@ -28,7 +28,7 @@ public class TaskServiceImpl implements TaskService {
         existingTask.setDescription(updatedTask.getDescription());
         existingTask.setStatus(updatedTask.getStatus());
         existingTask.setTitle(updatedTask.getTitle());
-        return taskRepo.save(updatedTask);
+        return taskRepo.save(existingTask);
     }
 
     @Override

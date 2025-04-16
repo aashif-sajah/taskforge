@@ -9,8 +9,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "tasks")
 public class Task
 {
@@ -21,6 +19,9 @@ public class Task
     @Column(nullable = false)
     private String title;
     private String description;
+
+    public Task() {
+    }
 
     @Enumerated(EnumType.STRING)
     private TaskStatus status;
